@@ -1,0 +1,17 @@
+…or create a new repository on the command line
+
+echo "# html-css-js-Portifolio_2" >> README.md
+git init
+git add README.md
+git commit -m "commit inicial"
+git branch -M main
+git remote add origin https://github.com/joao-tads/html-css-js-Portifolio_2.git
+git push -u origin main
+
+_________________________________________________________________________
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/joao-tads/html-css-js-Portifolio_2.git
+git branch -M main
+git push -u origin main
