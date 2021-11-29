@@ -1,5 +1,3 @@
-var hamburguer = document.querySelector('.hamburguer')
-
-hamburguer.addEventListener('click', () => {
-  var sidebar = document.querySelector('.sidebar').classList.toggle('show')
+document.querySelector('.hamburguer').addEventListener('click', () => {
+  document.querySelector('.container').classList.toggle('show-menu')
 })

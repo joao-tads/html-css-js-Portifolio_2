@@ -38,13 +38,58 @@
   cursor: pointer;
 }
 
+.show-menu .hamburguer {
+  right: 16rem;
+}
+
 .line {
   width: 100%;
   background-color: white;
   height: 0.1rem;
   box-shadow: 0.1rem 0.1rem 1px #000000;
+  transition: transform 1s;
 }
 
+.show-menu #line1 {
+  transform: rotate(45deg) translate(0.2rem, 0.3rem);
+}
+
+.show-menu #line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.show-menu #line3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.45rem);
+}
+
+.hamburguer span {
+  position: absolute;
+  left: 3rem;
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6e002c;
+  color: #fff;
+  font-family: var(--action-font);
+  opacity: 0;
+}
+
+.hamburguer span::before {
+  content: '';
+  position: absolute;
+  border-right: 0.5rem solid #6e002c;
+  border-top: 0.5rem solid transparent;
+  border-left: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+  opacity: 1;
+}
 /*========== HEADER =========*/
 header {
   width: 100%;
@@ -151,8 +196,13 @@ header {
   background-color: var(--sidebar-color);
   position: fixed;
   top: 0;
-  right: 0;
+  right: -20rem;
   color: var(--banner-btn-color);
+  transition: all 1s;
+}
+
+.show-menu .sidebar {
+  right: 0rem;
 }
 
 /*__________ menu _________*/
