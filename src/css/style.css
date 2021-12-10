@@ -11,6 +11,10 @@
 }
 
 /*========== BASE =========*/
+html {
+  scroll-behavior: smooth;
+}
+
 .btn {
   color: #fff;
   border: none;
@@ -232,10 +236,12 @@ header {
   right: -20rem;
   color: var(--banner-btn-color);
   transition: all 1s;
+  z-index: 150;
 }
 
 .show-menu .sidebar {
   right: 0rem;
+  z-index: 200;
 }
 
 /*__________ menu _________*/
@@ -701,7 +707,7 @@ header {
 
 .sessao-orcamento input[type='number'] {
   font-family: var(--secundary-font);
-  width: 4rem;
+  width: 6rem;
   font-size: 2rem;
   outline: none;
   border-radius: 10px;
@@ -713,6 +719,54 @@ header {
   padding: 1rem;
   cursor: pointer;
   grid-column: 2;
+}
+
+/*========== FOOTER =========*/
+footer {
+  width: 100%;
+  height: 10rem;
+  background-color: #222121;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p {
+  font-family: var(--secundary-font);
+  color: #a7a7a7;
+  font-size: 1.2rem;
+}
+
+.social-list a {
+  font-size: 1.5rem;
+  margin: 0 2rem;
+  color: #a7a7a7;
+}
+
+.social-list ul {
+  display: flex;
+}
+
+#link-top {
+  color: var(--banner-text-color);
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--banner-btn-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 0 0.1rem 0.6rem #000;
+  z-index: 1;
 }
 /*========== RESPONSIVO =========*/
 /* ___________ SCRERN  1440px __________*/
